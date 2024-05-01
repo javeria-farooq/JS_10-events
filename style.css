@@ -1,0 +1,67 @@
+/*div{
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+}*/
+
+/* //mode btn */
+
+/*.dark{
+    background-color: black;
+}
+
+.light{
+    background-color: white;
+}*/
+
+/*//toggle button*/
+
+#heading {
+    font-family: "Lugrasimo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0px 5px 10px black;
+    text-decoration: underline;
+}
+
+#modeBtn{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 5px 10px 15px black;
+}
+
+.dark{
+    color: white;
+    background-image: url("https://media.istockphoto.com/id/1085287936/photo/milky-way.webp?b=1&s=170667a&w=0&k=20&c=43m9Y8tP_mxMGXfoZLLtv58CQQ7IJt8HwoK-A9mMWiE=");
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-size: cover;
+}
+
+.light{
+    color: black;
+    background-image: url("https://media.istockphoto.com/id/1198117058/photo/bright-sun-with-beautiful-beams-in-the-sky.webp?b=1&s=170667a&w=0&k=20&c=b6TIRbRUijWBvX6E8URa7WYQcb8RqzjdvBuQQP5eL2c=");
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-size: cover;
+}
+
+.content{
+   text-align: center;
+}
+
+.modeBtnLight{
+    background-color: black;
+    color: white;
+}
+
+.modeBtnDark{
+    background-color: white;
+    color: black;
+}
