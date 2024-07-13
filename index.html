@@ -4,63 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="light">
-    
-    <!-- inline event handling: -->
-    <!-- <button onclick="console.log('button was clicked'); alert('button click hgya h')">
-        Click me!
-    </button>
+<body>
+    <!-- inline event handling -->
+    <!-- <h1>Hello JS Events!</h1>
+    <p>I am Javeria, I am learning JavaScript Events...</p>
+    <button onclick="inlineEvtHandling()">JS Events</button> -->
 
-    <button ondblclick="console.log('button was clicked at 2x')">
-        Click me 2 times!
-    </button>
+    <!-- JS event handling: assigning value -->
+    <!-- <h1>Hello JS Events!</h1>
+    <p>I am Javeria, I am learning JavaScript Events...</p>
+    <button class="evtBtn">JS Events</button> -->
 
-    <div onmouseover="console.log('you are inside the div')" onmouseout="console.log('you are outside the div')">
-        this is a div
-    </div>
+    <!-- JS event handling: event listener -->
 
-    <div onmouseover="console.log('you are inside the div')">
-        this is a div
-    </div> -->
+    <!-- <h1>Hello JS Events!</h1>
+    <p>I am Javeria, I am learning JavaScript Events...</p>
+    <button class="evtBtn">JS Events</button> -->
 
-    <!-- event handling in JS -->
+    <!-- now we see differents events which are mostly in usage. -->
+    <!-- <h1>Hello Events!</h1>
+    <div class="box hover box1">hover</div>
+    <div class="box out box2">out</div>
+    <div class="box hoverOut box3">hover & out</div>
+    <button class="click">Click 1x</button>
+    <button class="dblClick">Click 2x</button>
+    <button class="rightClick">Click context menu</button> -->
 
-    <!-- <button id="btn1">btn1!</button>
-    <button id="btn2">btn2 click on me at 2 times</button>
-    <div id="div1">this is a div</div> -->
+    <!-- JS handling vs event listener -->
+    <!-- <button class="btn">Click button</button> -->
 
-    <!-- event handling by event listener -->
-
-    <!-- <button id="btn1">btn1 !</button>
-    <button id="btn2">btn2 click 2x</button>
-    <div id="div1">this is a div</div> -->
-
-
-    <!-- //////PRACTICE QUESTIONS: -->
-
-    <!-- <button id="modeBtn">Change Mode</button> -->
-
-    <!-- //////toggle button: -->
-
+    <!-- practice question: -->
     <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <div id="myContainer" class="my-5 py-5">
-                    <h1 id="heading">Here You Can Change <br> Your Screen Mode</h1>
-                    <button id="modeBtn" class="my-5 modeBtnLight">Change Mode</button>
-                </div>
-            </div>
-        </div>
+        <h1 class="heading">Here you can change your screen mode or theme</h1>
+        <button class="toggleBtn">Change Mode</button>
     </div>
 
-
-
-    <script src="app.js"></script>
+    <script src="app.js"></script>    
 </body>
 </html>

@@ -1,181 +1,176 @@
-/*/////////event handle in JS */
-/*let btn1 = document.querySelector("#btn1")
-
-btn1.onclick = () => {
-    console.log("HANDLER 1")
-    alert("button 1 click hgya")
-}
-
-btn1.onclick = () => {
-    console.log("HANDLER2")
-}
-
-let btn2 = document.querySelector("#btn2")
-btn2.ondblclick = () => {
-    console.log("button 2 was clicked at 2x")
-}
-
-let div1 = document.querySelector("#div1")
-div1.onmouseover = () => {
-    console.log("you are inside div")
-}
-
-div1.onmouseleave = () => {
-    console.log("you leaved div")
+/*// inline event handling
+function inlineEvtHandling() {
+    console.log("Watch video for learning JS events")
 }*/
 
-/*now we try these from without using evt listener and using fnc variable */
+/*// JS event handling: assigning value
 
-/*const handler1 = () => {
-    console.log("HANDLER 1")
+let btn = document.querySelector(".evtBtn")
+btn.onclick = (evt) => {
+    console.log('watch video for learning JS events')
+    console.log(evt)
+    console.log(evt.type)
+    console.log(evt.target)
+    console.log(evt.clientX)
+    console.log(evt.clientY)
+}
+
+// JS event handling: event listener
+
+let btn2 = document.querySelector(".evtBtn")
+btn2.addEventListener('click', (evt) => {
+    console.log('watch video for learning JS events')
+    console.log(evt)
+    console.log(evt.type)
+    console.log(evt.target)
+    console.log(evt.clientX)
+    console.log(evt.clientY)
+})*/
+
+/*// now we see differents events which are mostly in usage.
+
+let hoverEl = document.querySelector('.hover')
+let outEl = document.querySelector('.out')
+let hoverOutEl = document.querySelector('.hoverOut')
+
+let click = document.querySelector('.click')
+let dblClick = document.querySelector('.dblClick')
+let rightClick = document.querySelector('.rightClick')
+
+hoverEl.addEventListener('mouseover', (evt) => {
+    console.log('you hover the div')
+    console.log(evt)
+    console.log(evt.type)
+})
+
+outEl.addEventListener('mouseout', (evt) => {
+    console.log('you hover out the div')
+    console.log(evt)
+    console.log(evt.type)
+})
+
+hoverOutEl.addEventListener('mouseover', (evt) => {
+    console.log('you hover the div')
+    console.log(evt)
+    console.log(evt.type)
+})
+
+hoverOutEl.addEventListener('mouseout', (evt) => {
+    console.log('you hover out the div')
+    console.log(evt)
+    console.log(evt.type)
+})
+
+click.addEventListener('click', (evt) => {
+    console.log('button clicked')
+    console.log(evt)
+    console.log(evt.type)
+})
+
+dblClick.addEventListener('dblclick', (evt) => {
+    console.log('button clicked 2x')
+    console.log(evt)
+    console.log(evt.type)
+})
+
+rightClick.addEventListener('contextmenu', (evt) => {
+    console.log('Right button clicked')
+    console.log(evt)
+    console.log(evt.type)
+})*/
+
+/*// JS handling vs event listener
+let btn = document.querySelector('.btn')
+
+// btn.onclick = (evt) => {
+//     console.log('clicked 1x')
+//     console.log(evt)
+//     console.log(evt.type)
+//     console.log(evt.target)
+//     console.log(evt.clientX)
+//     console.log(evt.clientY)
+// }
+
+// btn.onclick = () => {
+//     alert('btn was clicked')
+// }
+//now from the above handlers 1st one is overwrite. that's drawback of JS handling without event listener. it's solution is event listener
+
+// btn.addEventListener('click', (evt) => {
+//     console.log('button clicked')
+//     console.log(evt.type)
+//     console.log(evt.target)
+//     console.log(evt.clientX)
+//     console.log(evt.clientY)
+// })
+
+// btn.addEventListener('click', () => {
+//     alert('button was clicked')
+// })
+
+// btn.addEventListener('click', () => {
+//     document.write('hello events button')
+// })
+// and it will not overwrite
+
+// now we give defined function to events
+
+const handler1 = () => {
+    console.log('handler1')
 }
 
 const handler2 = () => {
-    console.log("HANDLER2")
+    console.log('handler2')
 }
 
-btn1.onclick = handler1
-btn1.onclick = handler2*/
-
-/*//////////access event obj's properties */
-
-/*let btn1 = document.querySelector("#btn1")
-btn1.onclick = (evt) => {
-    console.log(`evt = ${evt}`)
-    console.log(`type of evt = ${evt.type}`)
-    console.log(`target of evt = ${evt.target}`)
-    console.log(`clientX of evt = ${evt.clientX} and clientY of evt = ${evt.clientY}`)
-
-    console.log(evt)
-    console.log(evt.type)
-    console.log(evt.target)
-    console.log(evt.clientX, evt.clientY)
+const handler3 = () => {
+    console.log('handler3')
 }
 
-let div1 = document.querySelector("#div1")
-div1.onmouseover = (evt) => {
-    console.log(evt)
-    console.log(evt.type)
-    console.log(evt.target)
-    console.log(evt.clientX, evt.clientY)
+// btn.onclick = handler1
+// btn.onclick = handler2
+// btn.onclick = handler3
+
+btn.addEventListener('click', handler1)
+btn.addEventListener('click', handler2)
+btn.addEventListener('click', handler3)
+
+// remove event listener
+btn.removeEventListener('click', handler2)
+btn.removeEventListener("click", handler3)*/
+
+/*practice question: */
+
+let toggleBtn = document.querySelector('.toggleBtn')
+let heading = document.querySelector('.heading')
+let container = document.querySelector('.container')
+
+let theme = 'light';
+
+const lightTheme = () => {
+    container.style.backgroundColor = 'white';
+    heading.style.color = 'black';
+    toggleBtn.style.color = 'white';
+    toggleBtn.style.backgroundColor = 'black';
+    toggleBtn.style.boxShadow = '0px 0px 5px black';
 }
 
-let btn1 = document.querySelector("#btn1")
-btn1.onclick = () => {
-    console.log("handler 1")
+const darkTheme = () => {
+    container.style.backgroundColor = 'black';
+    heading.style.color = 'white';
+    toggleBtn.style.color = 'black';
+    toggleBtn.style.backgroundColor = 'white';
+    toggleBtn.style.boxShadow = '0px 0px 5px white';
 }
 
-btn1.onclick = () => {
-    console.log("handler 2")
-}*/
-
-/*/////Evt handling by evt listener */
-
-/*let btn1 = document.querySelector("#btn1")
-
-btn1.addEventListener("click", () => {
-    console.log("btn1-evt listener_handler-1")
-})
-
-btn1.addEventListener("click", () => {
-    console.log("btn1-evt listener_handler-2")
-})
-
-let btn2 = document.querySelector("#btn2")
-btn2.addEventListener("dblclick", (evt) => {
-    console.log(evt)
-    console.log(`type of event = ${evt.type}`)
-    console.log(`target of event = ${evt.target}`)
-    console.log("btn2-evt listener_handler-1")
-})
-
-btn2.addEventListener("mouseover", () => {
-    console.log("you hover the button2")
-})*/
-
-/*now we try these from using evt listener and fnc variable */
-
-/*const evtListHandler1 = () => {
-    console.log("evt listen HANDLER 1")
-}
-
-const evtListHandler2 = () => {
-    console.log("evt listen HANDLER2")
-}
-
-btn1.addEventListener("click", evtListHandler1)
-btn1.addEventListener("click", evtListHandler2)*/
-
-/*//////////////remove event listener */
-
-/*const handler3 = () => {
-    console.log("evt listener HANDLER - 3")
-}
-
-let btn1 = document.querySelector("#btn1")
-btn1.addEventListener("click", () => {
-    console.log("evt listener HANDLER - 1")
-})
-
-btn1.addEventListener("click", () => {
-    console.log("evt listener HANDLER - 2")
-})
-
-btn1.addEventListener("click", handler3)
-
-btn1.addEventListener("click", () => {
-    console.log("evt listener HANDLER - 4")
-})
-
-btn1.removeEventListener("click", handler3)*/
-
-
-
-/*//////////PRACTICE QUESTIONS: */
-
-/*let modeBtn = document.querySelector("#modeBtn")
-let currMode = "light"
-
-modeBtn.addEventListener("click", () => {
-   if(currMode === "light") {
-    currMode = "dark"
-    console.log(`your current mode is ${currMode}`)
-    let body = document.querySelector("body")
-    body.setAttribute("class", "dark")
-    body.style.color = "white"
-   }
-
-   else{
-    currMode = "light"
-    console.log(`your current mode is ${currMode}`)
-    let body = document.querySelector("body")
-    body.setAttribute("class", "light")
-    body.style.color = "black"
-   }
-})*/
-
-/*////toggle button */
-
-let modeBtn = document.querySelector("#modeBtn")
-
-let currMode = "light"
-
-modeBtn.addEventListener("click", () => {
-    if(currMode === "light") {
-        currMode = "dark"
-        let body = document.querySelector("body")
-        body.classList.add("dark")
-        body.classList.remove("light")
-        modeBtn.classList.add("modeBtnDark")
-        modeBtn.classList.remove("modeBtnLight")
+toggleBtn.addEventListener('click', () => {
+    if(theme === 'light') {
+        darkTheme()
+        theme = 'dark'
     }
 
     else{
-        currMode = "light"
-        let body = document.querySelector("body")
-        body.classList.add("light")
-        body.classList.remove("dark")
-        modeBtn.classList.add("modeBtnLight")
-        modeBtn.classList.remove("modeBtnDark")
+        lightTheme()
+        theme = 'light'
     }
 })
